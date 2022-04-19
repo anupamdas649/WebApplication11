@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication11.DaaModules;
 
-namespace WebApplication11.DaaModules
+namespace WebApplication11.DomainModels
 {
-    public class Booking
+    public class AddBookingRequest
     {
-        public int ID { get; set; }
-        
         public String CheckInDate { get; set; }
         public String CheckOutDate { get; set; }
         public int TotalDays { get; set; }
@@ -19,4 +18,3 @@ namespace WebApplication11.DaaModules
         public Hotel Hotel { get; set; }
     }
 }
-

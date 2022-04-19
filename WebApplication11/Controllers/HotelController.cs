@@ -24,8 +24,8 @@ namespace WebApplication11.Controllers
         [Route("[controller]")]
         public async Task<IActionResult> GetAllHotels()
         {
-           var hotels = await hotelsRepository.GetHotels();
-           return Ok(mapper.Map<List<Hotel>>(hotels));
+            var hotels = await hotelsRepository.GetHotels();
+            return Ok(mapper.Map<List<Hotel>>(hotels));
         }
 
 
@@ -35,12 +35,14 @@ namespace WebApplication11.Controllers
         {
             var hotel = await hotelsRepository.GetHotel(ID);
 
-            if(hotel == null)
+            if (hotel == null)
             {
                 return NotFound();
             }
 
             return Ok(mapper.Map<Hotel>(hotel));
         }
+
+
     }
 }

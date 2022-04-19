@@ -12,5 +12,6 @@ namespace WebApplication11.DomainModels
         public String Location { get; set; }
         public String Description { get; set; }
         public int Price { get; set; }
+        public String Image { get; set; }
     }
 }

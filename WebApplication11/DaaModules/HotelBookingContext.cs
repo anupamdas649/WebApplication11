@@ -8,6 +8,10 @@ namespace WebApplication11.DaaModules
 {
     public class HotelBookingContext : DbContext
     {
+        public HotelBookingContext()
+        {
+        }
+
         public HotelBookingContext(DbContextOptions<HotelBookingContext> options) : base(options) { }
 
         public DbSet<Customers> Customers { get; set; }

@@ -26,17 +26,23 @@ namespace WebApplication11.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CheckInDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CheckOutDate")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("CustomersID")
                         .HasColumnType("int");
 
                     b.Property<int?>("HotelID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.Property<long>("TotalCost")
                         .HasColumnType("bigint");
+
+                    b.Property<int>("TotalDays")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -82,6 +88,9 @@ namespace WebApplication11.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HotelName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Location")

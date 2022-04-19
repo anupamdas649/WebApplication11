@@ -15,9 +15,9 @@ namespace WebApplication11.Repositories
             this.context = context;
         }
 
-    
 
-        //public HotelBookingContext Context { get; }
+
+       
 
         public async Task<List<Hotel>> GetHotels()
         {
@@ -29,6 +29,9 @@ namespace WebApplication11.Repositories
             return await context.Hotel.FirstOrDefaultAsync(x => x.ID == ID);
         }
 
-
+        public Task GetCustomers(int customers)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

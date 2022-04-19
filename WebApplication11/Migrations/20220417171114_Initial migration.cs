@@ -2,7 +2,7 @@
 
 namespace WebApplication11.Migrations
 {
-    public partial class IntialMigrtion : Migration
+    public partial class Initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +31,8 @@ namespace WebApplication11.Migrations
                     HotelName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<int>(type: "int", nullable: false)
+                    Price = table.Column<int>(type: "int", nullable: false),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,7 +45,9 @@ namespace WebApplication11.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    CheckInDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CheckOutDate = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TotalDays = table.Column<int>(type: "int", nullable: false),
                     TotalCost = table.Column<long>(type: "bigint", nullable: false),
                     CustomersID = table.Column<int>(type: "int", nullable: true),
                     HotelID = table.Column<int>(type: "int", nullable: true)

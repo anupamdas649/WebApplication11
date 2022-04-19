@@ -10,8 +10,8 @@ using WebApplication11.DaaModules;
 namespace WebApplication11.Migrations
 {
     [DbContext(typeof(HotelBookingContext))]
-    [Migration("20220411170636_Intial Migrtion")]
-    partial class IntialMigrtion
+    [Migration("20220417171114_Initial migration")]
+    partial class Initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,17 +28,23 @@ namespace WebApplication11.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CheckInDate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CheckOutDate")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("CustomersID")
                         .HasColumnType("int");
 
                     b.Property<int?>("HotelID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
                     b.Property<long>("TotalCost")
                         .HasColumnType("bigint");
+
+                    b.Property<int>("TotalDays")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -84,6 +90,9 @@ namespace WebApplication11.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HotelName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Location")

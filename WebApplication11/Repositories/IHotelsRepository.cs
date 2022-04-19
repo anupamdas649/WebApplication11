@@ -10,5 +10,7 @@ namespace WebApplication11.Repositories
     {
         Task<List<Hotel>> GetHotels();
         Task<Hotel> GetHotel(int ID);
+        Task GetCustomers(int customers);
+        //Task<Booking> AddBookingRequest();
     }
 }
